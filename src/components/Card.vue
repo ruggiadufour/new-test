@@ -15,23 +15,12 @@
     </button>
 
     <div class="card-button-state-wrapper">
-      <!-- <button
-        v-for="stateId of statesList"
-        :key="stateId"
-        class="card-button-state"
-        :class="{ active: data.attendanceState === stateId }"
-        :style="`--color: ${attendanceStates[stateId].color}`"
-        @click.stop="updateState(stateId)"
-      >
-        {{ attendanceStates[stateId].initial }}
-      </button> -->
       <button
         v-for="stateId of statesList"
         :key="stateId"
         class="card-button-state"
         @click.stop="updateState(stateId)"
       >
-        <!-- {{ attendanceStates[stateId].initial }} -->
         <AttendanceStatus
           :state="stateId"
           :active="data.attendanceState === stateId"
